@@ -2,18 +2,19 @@
 
 using namespace std;
 
-void Example();
+int Factorial(int n);
 
 int main()
 {
-	Example();
+	cout << Factorial(5);
 
 	return 0;
 }
 
-void Example()
+int Factorial(int n)
 {
-	cout << "In function";
+	if (n == 1)
+		return 1;
 
-	Example();
+	return n * Factorial(n - 1);
 }
